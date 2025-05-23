@@ -50,7 +50,10 @@ require("Disconnect.php");
                     <td><?= $intern['id'] ?></td>
                     <td><?= $intern['first_name'] ?></td>
                     <td><?= $intern['last_name'] ?></td>
-                    <td><a href="intern.php?id=<?= $intern['id'] ?>">voir</a></td>
+                    <td>
+                        <a href="intern.php?id=<?= $intern['id'] ?>">voir</a>
+                        <a href="delete.php?id=<?= $intern['id'] ?>">Supprimer</a>
+                    </td>
                 </tr>
             <?php endforeach ?>
         </tbody>

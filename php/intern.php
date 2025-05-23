@@ -31,7 +31,12 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     <!-- ajout d'une condition d'affichage -->
     <?php
-    if (isset($intern)):
+    if (
+        isset($intern)
+        && !empty($intern)
+    ):
+        // enlever le isset est possible, !empty evite l'option "utilisateur qui entre une id inexistante dans la BDD", isset ne l'évite pas
+        // print_r($intern)
     ?>
         <!-- si la condition est remplie, afficher le html ci-dessous -->
 
