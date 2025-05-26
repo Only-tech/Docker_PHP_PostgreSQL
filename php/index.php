@@ -26,7 +26,7 @@ require("Disconnect.php");
 
 <body>
     <h1>Liste des stagiaires</h1>
-    <pre><?php print_r($interns) ?></pre>
+    <!-- <pre><?php print_r($interns) ?></pre> -->
     <table>
         <thead>
             <th>id</th>
@@ -52,6 +52,7 @@ require("Disconnect.php");
                     <td><?= $intern['last_name'] ?></td>
                     <td>
                         <a href="intern.php?id=<?= $intern['id'] ?>">voir</a>
+                        <a href="update.php?id=<?= $intern['id'] ?>">Modifier</a>
                         <a href="delete.php?id=<?= $intern['id'] ?>">Supprimer</a>
                     </td>
                 </tr>
